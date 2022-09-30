@@ -1,0 +1,19 @@
+name: MagicSigns
+version: '${project.version}'
+main: me.uniqueimpact.magicsigns.MagicSigns
+api-version: 1.19
+authors: [ UniqueImpact ]
+description: Allow players to place custom signs to trigger commands and messages!
+commands:
+  magicsigns:
+    description: Command for the Magic Signs plugin.
+    usage: /<command> [reload]
+    aliases: ms
+permissions:
+  magicsigns.use:
+    description: Gives default access to use of any Magic Signs without a custom Permission set.
+    default: true
+  magicsigns.relaod:
+    description: Reloads the plugin.
+    default: false
+softdepend: [PlaceholderAPI]

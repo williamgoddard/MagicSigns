@@ -1,0 +1,102 @@
+# Magic Signs plugin, by UniqueImpact
+
+#How frequently signs update (seconds)
+UpdateFrequency: 1
+
+# The sign templates that players will be able to create on the server.
+Signs:
+
+  # Feed the player when they click the sign
+  Feed:
+    Lines:
+      - '[Feed]'
+      - ''
+      - ''
+      - ''
+    ChangeTo:
+      - '&a&l[Feed]'
+      - ''
+      - 'Click to'
+      - 'replenish food!'
+    Commands:
+      - 'effect give $player saturation 1 100 true'
+      - 'execute as $player at @s run playsound minecraft:entity.player.burp player @s'
+    Message: '&a> You have been fed!'
+
+  # Heal the player when they click the sign
+  Heal:
+    Lines:
+      - '[Heal]'
+      - ''
+      - ''
+      - ''
+    ChangeTo:
+      - '&a&l[Heal]'
+      - ''
+      - 'Click to be'
+      - 'healed!'
+    Commands:
+      - 'effect give $player instant_health 1 100 true'
+      - 'execute as $player at @s run playsound minecraft:entity.player.levelup player @s'
+    Message: '&a> You have been healed!'
+
+  # Kill the player when they click the sign
+  Suicide:
+    Lines:
+      - '[Suicide]'
+      - ''
+      - ''
+      - ''
+    ChangeTo:
+      - '&c&l[Suicide]'
+      - ''
+      - 'Click to end'
+      - 'your life. :('
+    Commands:
+      - 'kill $player'
+
+  # Display the player who placed the sign
+  PlacedBy:
+    Lines:
+      - '[Me]'
+      - ''
+      - ''
+      - ''
+    ChangeTo:
+      - 'This sign was'
+      - 'placed by:'
+      - ''
+      - '&9&l$player'
+    Message: 'This sign was placed by &9&l$player'
+
+  # Display the current server time (requires PlaceholderAPI to work properly)
+  Time:
+    Lines:
+      - '[Time]'
+      - ''
+      - ''
+      - ''
+    ChangeTo:
+      - '&a&l[Time]'
+      - ''
+      - '&9%localtime_time%'
+      - '&b%localtime_time_hh:mm:ss%'
+    Message: 'The current time is &b%localtime_time_hh:mm:ss%'
+
+  # Gives the player a cookie when they click the sign.
+  # This sign uses a custom permission, so the player must have 'magicsigns.use.cookie' to use this.
+  Cookie:
+    Lines:
+      -'[Cookie]'
+      - ''
+      - ''
+      - ''
+    ChangeTo:
+      - '&a&l[Cookie]'
+      - ''
+      - 'Click for a'
+      - 'free cookie!'
+    Commands:
+      - 'give $player cookie'
+    Message: '&a> Here's your free cookie!'
+    Permission: 'cookie'
