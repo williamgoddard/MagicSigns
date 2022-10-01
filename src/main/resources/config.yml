@@ -87,7 +87,7 @@ Signs:
   # This sign uses a custom permission, so the player must have 'magicsigns.use.cookie' to use this.
   Cookie:
     Lines:
-      -'[Cookie]'
+      - '[Cookie]'
       - ''
       - ''
       - ''
@@ -98,5 +98,5 @@ Signs:
       - 'free cookie!'
     Commands:
       - 'give $player cookie'
-    Message: '&a> Here's your free cookie!'
+    Message: '&a> Here is your free cookie!'
     Permission: 'cookie'
